@@ -496,7 +496,7 @@ def wct(signal, signal2, dt, dj=1/12, s0=-1, J=-1, sig=True, significance_level=
     # Calculates the significance using Monte Carlo simulations with 95%
     # confidence as a function of scale.
     a1, b1, c1 = ar1(signal)
-    a2, b2, c2 = ar1(signal)
+    a2, b2, c2 = ar1(signal2)
     if sig:
         kwargs.update(cwt_kwargs)
         sig = wct_significance(a1, a2, significance_level=significance_level,
