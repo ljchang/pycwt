@@ -447,7 +447,20 @@ def wct(signal, signal2, dt, dj=1/12, s0=-1, J=-1, sig=True, significance_level=
 
     Returns
     -------
-    Something : TBA and TBC
+    WCT (array like):
+        wavelet coherence transform according to the selected mother wavelet.
+    aWCT (array like):
+        phase angle of wavelet coherence transform.
+    coi (array like):
+        Cone of influence, which is a vector of N points containing
+        the maximum Fourier period of useful information at that
+        particular time. Periods greater than those are subject to
+        edge effects.
+    freqs (array like):
+        Vector of Fourier equivalent frequencies (in 1 / time units)
+        that correspond to the wavelet scales.
+    signif (array like):
+        Significance levels as a function of scale.
 
     See also
     --------
